@@ -1,0 +1,202 @@
+:root{
+  --couleur-noir : #060505;
+  --couleur-blanche : #ECE3DD;
+  --couleur-cafeClaire : #584C45;
+  --hover-cafe:#BF9B73;
+}
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  padding-top: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+}
+
+/* Header */
+header{
+  width: 100%;
+  height: 60px;
+  background: var(--couleur-noir);
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+header .container-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 60px;
+  float: left;
+}
+header .container-logo a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--couleur-blanche);
+  font-weight: 600;
+  font-size: 14px;
+}
+.container-logo a span{
+  display: block;
+  line-height: 14px;
+}
+.container-logo a span.icon-logo{
+  width: 40px;
+  margin-right: 8px;
+}
+
+/* menu de navigation */
+header nav{
+  float: right;
+}
+header nav ul li{
+  display: inline-block;
+  list-style: none;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: var(--couleur-blanche);
+  line-height: 60px;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  transition: .3s ease-in;
+}
+header nav ul li a.active,
+header nav ul li a:hover{
+  color: var(--hover-cafe);
+}
+
+/* contenus principal */
+.container-main{
+  width: 100%;
+  height: auto;
+}
+
+/* main banner */
+.container-main .container-banner{
+  width: 100%;
+  height: 400px;
+  background: url("../images/cover.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  position: relative;
+}
+.container-main .container-banner .container--overlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, .5);
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+}
+.container-main .container-banner .content-banner{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.container-banner .content-banner h1{
+    font-size: 2.5em;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.container-banner .content-banner h1 span{
+  cursor: pointer;
+  position: relative;
+  transition: .2s ease-in;
+}
+.container-banner .content-banner h1 span::before{
+    content: "";
+    width: 300px;
+    height: 3px;
+    background: var(--hover-cafe);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.container-banner .content-banner h1 span:hover{
+  color: var(--hover-cafe);
+}
+.container-banner .content-banner h4{
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.container-banner .content-banner h1,
+.container-banner .content-banner h4{
+  color: var(--couleur-blanche);
+}
+
+/* container-programmes */
+.container-main .container--programmes{
+  width: 100%;
+  height: auto;
+  padding: 20px 40px;
+}
+.container-main .container--programmes .content-title{
+  text-align: center;
+}
+.container--programmes .content-title .title-primary{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: var(--couleur-noir);
+}
+.container--programmes .content-title .title-secondary{
+  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 200;
+  color: rgba(0,0,0, .7);
+}
+
+/* content-text */
+.container-main .container--programmes .container-content-flex{
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  margin: 20px auto;
+
+}
+.container--programmes .container-content-flex .content-text{
+  width: 250px;
+  height: 300px;
+}
+.container--programmes .container-content-flex .content-text .icon-circle-clock{
+  display: flex;
+  width: 100%;
+  height: 140px;
+  justify-content: center;
+  align-items: center;
+}
+.container-content-flex .content-text .icon-circle-clock svg{
+  width: 150px;
+  color: var(--couleur-noir);
+}
+.container-content-flex .content-text .description-programme{
+  text-align: center;
+}
+.container-content-flex .content-text .description-programme h1{
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-size: 1.5em;
+  color: var(--couleur-noir);
+  margin-bottom: 8px
+}
+.container-content-flex .content-text .description-programme li{
+  list-style-type: none;
+  margin-bottom: 3px;
+  color: rgba(0,0,0, .7);
+}
